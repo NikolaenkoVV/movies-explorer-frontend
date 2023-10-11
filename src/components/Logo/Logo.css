@@ -1,0 +1,10 @@
+.logo__link {
+  text-decoration: none;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  padding: 3px 0;
+  display: block;
+}

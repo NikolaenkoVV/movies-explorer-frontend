@@ -1,0 +1,50 @@
+.register {
+  padding: 67px 0px 70px;
+  width: 100%;
+  max-width: 396px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.register__quote {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #a0a0a0;
+  text-align: center;
+  margin: 0;
+  display: block;
+}
+
+.register__link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #3456f3;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .register {
+    padding: 229px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .register {
+    padding: 53px 30px 28px;
+    align-items: center;
+  }
+  .register__quote {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .register__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
