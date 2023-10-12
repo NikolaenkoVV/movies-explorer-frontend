@@ -73,7 +73,9 @@
   .nav-movies__link_type_active {
     border-bottom: 2px solid #000;
   }
+}
 
+@media screen and (max-width: 570px) {
   .nav-movies__list_type_sidebar {
     gap: 24px;
   }

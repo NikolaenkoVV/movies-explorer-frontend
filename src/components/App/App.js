@@ -19,7 +19,7 @@ function App() {
           path="/"
           element={
             <>
-              <Header isLoggedIn={true} />
+              <Header isLoggedIn={false} />
               <Main />
               <Footer />
             </>

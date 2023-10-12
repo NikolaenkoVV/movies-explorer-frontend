@@ -4,7 +4,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  background: url(../../images/menu-icon.png);
+  background: url(../../images/menu-icon.svg);
   background-position: center;
   background-repeat: no-repeat;
   display: none;
@@ -16,7 +16,7 @@
 }
 
 .menu-button_type_light {
-  background: url(../../images/menu-icon-light.png);
+  background: url(../../images/menu-icon-light.svg);
 }
 
 @media screen and (max-width: 768px) {

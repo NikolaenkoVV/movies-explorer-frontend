@@ -1,12 +1,12 @@
 .header {
   width: 100%;
+  min-height: 74px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 70px;
   box-sizing: border-box;
   background: rgba(7, 48, 66, 1);
-  position: relative;
 }
 
 .header_type_light {

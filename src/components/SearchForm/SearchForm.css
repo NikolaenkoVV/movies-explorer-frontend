@@ -14,13 +14,17 @@
   margin-bottom: 33px;
 }
 
+.search__form:focus-within {
+  border-bottom: 1px solid #3456f3;
+}
+
 .search__input {
   width: 73%;
   border: none;
   font-size: 28px;
   line-height: 34px;
   font-weight: 500;
-  color: #a0a0a0;
+  color: #000;
   margin: 0;
   padding: 0;
   outline: none;

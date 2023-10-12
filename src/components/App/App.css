@@ -1,9 +1,12 @@
 .content {
   width: 100%;
+  max-width: 1280px;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
+  box-sizing: border-box;
   background: white;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;

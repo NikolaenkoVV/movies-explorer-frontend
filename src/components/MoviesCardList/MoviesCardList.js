@@ -4,12 +4,12 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 function MoviesCardList({ movies }) {
   return (
     <>
-      <ul className="movies__list">
+      <ul className="movies-list">
         {movies.map((movie) => (
           <MoviesCard key={movie.id} movie={movie} />
         ))}
       </ul>
-      <button className="movies__button" type="button">
+      <button className="movies-button" type="button">
         Ещё
       </button>
     </>

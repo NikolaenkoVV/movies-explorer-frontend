@@ -134,12 +134,10 @@
     flex-direction: column;
     gap: 56px;
     margin-bottom: 60px;
-    /* max-width: 284px; */
   }
 
   .about-project__info {
     width: 100%;
-    /* max-width: 284px; */
     gap: 16px;
   }
 

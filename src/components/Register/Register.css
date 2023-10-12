@@ -1,11 +1,20 @@
 .register {
-  padding: 67px 0px 70px;
   width: 100%;
-  max-width: 396px;
   height: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
+  max-width: 396px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px 0;
+  box-sizing: border-box;
+}
+
+.register__content {
+  width: 100%;
+  height: 100%;
+  max-height: 560px;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -28,16 +37,14 @@
   margin-top: 16px;
 }
 
-@media screen and (max-width: 800px) {
-  .register {
-    padding: 229px 0;
-  }
-}
-
 @media screen and (max-width: 450px) {
   .register {
-    padding: 53px 30px 28px;
+    padding: 56px 30px 30px;
+    justify-content: flex-start;
+  }
+  .register__content {
     align-items: center;
+    max-height: 100%;
   }
   .register__quote {
     font-size: 12px;

@@ -40,7 +40,7 @@
   background-color: #f9f9f9;
   padding: 0;
   margin: 0;
-  background: url(../../images/card-button-icon.png);
+  background: url(../../images/card-button-icon.svg);
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.2s linear;
@@ -56,11 +56,11 @@
 }
 
 .movie__button_type_saved {
-  background: url(../../images/card-button-icon-save.png);
+  background: url(../../images/card-button-icon-save.svg);
 }
 
 .movie__button_type_delete {
-  background: url(../../images/card-button-icon-delete.png);
+  background: url(../../images/card-button-icon-delete.svg);
 }
 
 .movie__duration {

@@ -5,12 +5,13 @@
   flex-direction: column;
   margin-bottom: 16px;
   box-sizing: border-box;
+  margin-top: 40px;
 }
 .form__title {
   font-size: 24px;
   line-height: 29px;
   font-weight: 500;
-  margin: 37px 0 40px;
+  margin: 0 0 40px;
 }
 
 .form__input-wrapper {
@@ -29,7 +30,7 @@
 
 .form__input {
   box-sizing: border-box;
-  padding: 5px 0 10px;
+  padding: 5px 0 11px;
   border: none;
   border-bottom: 1px solid #e8e8e8;
   outline: 0;
@@ -75,15 +76,22 @@
   text-align: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .form__title {
-    margin: 46px 0 81px;
+    margin-bottom: 80px;
     text-align: center;
+    align-self: center;
   }
 
   .form__submit-button {
     padding: 15px 0;
     font-size: 12px;
     line-height: 15px;
+    justify-self: flex-end;
+    margin-top: auto;
+  }
+
+  .form {
+    margin-top: 50px;
   }
 }

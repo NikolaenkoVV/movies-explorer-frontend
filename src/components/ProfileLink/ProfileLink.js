@@ -1,6 +1,6 @@
 import "./ProfileLink.css";
 import { Link } from "react-router-dom";
-import profileLogo from "../../images/profile-link-icon.png";
+import profileLogo from "../../images/profile-link-icon.svg";
 import { useLocation } from "react-router-dom";
 
 function ProfileLink({ onSideBar, onClose }) {

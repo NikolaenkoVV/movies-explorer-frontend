@@ -1,6 +1,7 @@
 .about-me {
   padding: 110px 70px 100px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .about-me__title {

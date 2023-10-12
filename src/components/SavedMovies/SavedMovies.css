@@ -1,5 +1,6 @@
 .saved-movies {
   padding: 70px 70px 80px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 800px) {
