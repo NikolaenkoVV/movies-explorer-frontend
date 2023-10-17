@@ -1,0 +1,8 @@
+.logo-link {
+  text-decoration: none;
+  line-height: 0;
+}
+
+.logo {
+  object-fit: cover;
+}

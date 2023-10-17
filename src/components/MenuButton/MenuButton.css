@@ -1,0 +1,26 @@
+.menu-button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background: url(../../images/menu-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.menu-button_type_light {
+  background: url(../../images/menu-icon-light.svg);
+}
+
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+}

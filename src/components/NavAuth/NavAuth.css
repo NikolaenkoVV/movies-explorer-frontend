@@ -1,0 +1,51 @@
+.nav-auth {
+  align-self: center;
+}
+
+.nav-auth__list {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-auth__link {
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.nav-auth__link:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.nav-auth__link_type_signin {
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 3px;
+  background: rgba(43, 224, 128, 1);
+}
+
+@media screen and (max-width: 400px) {
+  .nav-auth__list {
+    gap: 14px;
+  }
+
+  .nav-auth__link {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .nav-auth__link_type_signin {
+    padding: 5px 12px;
+  }
+}
