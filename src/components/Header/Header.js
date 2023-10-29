@@ -6,13 +6,15 @@ import ProfileLink from "../ProfileLink/ProfileLink";
 import { useLocation } from "react-router-dom";
 import MenuButton from "../MenuButton/MenuButton";
 import SideBar from "../SideBar/SideBar";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
-function Header({ isLoggedIn }) {
+function Header() {
   const location = useLocation();
   const [isSideBarOpen, setisSideBarOpen] = useState(false);
-
   const handleSideBarOpenToggle = () => setisSideBarOpen(!isSideBarOpen);
+  const { currentUser } = useContext(CurrentUserContext);
+
   return (
     <header
       className={`header ${
@@ -20,11 +22,21 @@ function Header({ isLoggedIn }) {
       }`}
     >
       <Logo />
-      {isLoggedIn && <NavMovies isOpen={isSideBarOpen} onSideBar={false} />}
-      {isLoggedIn && <ProfileLink onSideBar={false} />}
-      {!isLoggedIn && <NavAuth />}
-      {isLoggedIn && <MenuButton handleOpen={handleSideBarOpenToggle} />}
-      <SideBar isOpen={isSideBarOpen} handleClose={handleSideBarOpenToggle}/>
+      {currentUser ? (
+        <>
+          <NavMovies isOpen={isSideBarOpen} onSideBar={false} />{" "}
+          <ProfileLink onSideBar={false} />{" "}
+          <MenuButton handleOpen={handleSideBarOpenToggle} />{" "}
+          <SideBar
+            isOpen={isSideBarOpen}
+            handleClose={handleSideBarOpenToggle}
+          />
+        </>
+      ) : (
+        <>
+          <NavAuth />
+        </>
+      )}
     </header>
   );
 }

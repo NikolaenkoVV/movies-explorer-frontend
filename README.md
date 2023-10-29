@@ -21,3 +21,10 @@ Frontend-часть дипломного проекта курса "Frontend-р�
 
 [Вариант "Light-1"](https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/Дипломный-проект?type=design&node-id=891-3857&mode=design&t=lRzT6PM6ewWX2BlQ-0)
 
+## Ссылка на сайт
+
+[Сайт](https://moviedallas.nomoredomainsrocks.ru/)
+
+##Ссылка на пул-реквест
+
+[Пул-реквест]()

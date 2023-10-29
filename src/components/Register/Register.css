@@ -18,6 +18,13 @@
   flex-direction: column;
 }
 
+.register__title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  margin: 40px 0 40px;
+}
+
 .register__quote {
   font-size: 14px;
   line-height: 17px;
@@ -26,6 +33,7 @@
   text-align: center;
   margin: 0;
   display: block;
+  margin-top: 16px;
 }
 
 .register__link {
