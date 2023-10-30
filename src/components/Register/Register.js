@@ -3,7 +3,7 @@ import "../Form/Form.css";
 import Logo from "../Logo/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import useFormValidation from "../../hooks/useFormValidation";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as auth from "../../utils/auth";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
@@ -12,8 +12,14 @@ function Register({ setPopupMessage, setIsOpenPopup }) {
   const [isLoading, setIsLoading] = useState(false);
   const [serverErrorMessage, setServerErrorMessage] = useState("");
   const navigate = useNavigate();
-  const { setCurrentUser } =
+  const { currentUser, setCurrentUser } =
     useContext(CurrentUserContext);
+
+  useEffect(()=> {
+    if(currentUser) {
+      navigate("/movies");
+    }
+  }, [currentUser]);
 
   const handleRegister = (data) => {
     setIsLoading(true);

@@ -2,7 +2,7 @@ import "./Login.css";
 import Logo from "../Logo/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import useFormValidation from "../../hooks/useFormValidation";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as auth from "../../utils/auth";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
@@ -12,6 +12,12 @@ function Login({ setPopupMessage, setIsOpenPopup }) {
   const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
   const [serverErrorMessage, setServerErrorMessage] = useState("");
   const navigate = useNavigate();
+
+  useEffect(()=> {
+    if(currentUser) {
+      navigate("/movies");
+    }
+  }, [currentUser]);
 
   const handleLogin = (email, password) => {
     setIsLoading(true);
