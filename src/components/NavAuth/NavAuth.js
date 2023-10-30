@@ -12,7 +12,7 @@ function NavAuth() {
         </li>
         <li className="nav-auth__item">
           <Link
-            to="/signup"
+            to="/signin"
             className="nav-auth__link nav-auth__link_type_signin"
           >
             Войти

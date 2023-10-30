@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 33px;
+  position: relative;
 }
 
 .search__form:focus-within {
@@ -28,6 +29,16 @@
   margin: 0;
   padding: 0;
   outline: none;
+}
+
+.search__error {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  color: #ff3055;
 }
 
 .search__button {
@@ -152,5 +163,6 @@
   .search {
     margin-bottom: 91px;
     padding: 0 4px;
+    box-sizing: border-box;
   }
 }
