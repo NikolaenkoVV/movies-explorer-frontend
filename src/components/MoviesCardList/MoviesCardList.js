@@ -45,7 +45,7 @@ function MoviesCardList({
         setShowedMoviesCount();
       }, 1000)
     );
-  }, []);
+  }, [movies]);
 
   if (!movies.length) return "Ничего не найдено";
 
