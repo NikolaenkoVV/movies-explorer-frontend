@@ -12,16 +12,18 @@ function Register({ setPopupMessage, setIsOpenPopup }) {
   const [isLoading, setIsLoading] = useState(false);
   const [serverErrorMessage, setServerErrorMessage] = useState("");
   const navigate = useNavigate();
-  const { currentUser, setCurrentUser } =
-    useContext(CurrentUserContext);
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
 
-  useEffect(()=> {
-    if(currentUser) {
+  useEffect(() => {
+    if (currentUser) {
       navigate("/movies");
     }
   }, [currentUser]);
 
   const handleRegister = (data) => {
+    if (isLoading) {
+      return;
+    }
     setIsLoading(true);
     auth
       .register(data)
@@ -30,12 +32,14 @@ function Register({ setPopupMessage, setIsOpenPopup }) {
           localStorage.setItem("jwt", res.token);
           setCurrentUser(res.user);
           setIsOpenPopup(true);
-          setPopupMessage("Регистрация прошла успешно!")
+          setPopupMessage("Регистрация прошла успешно!");
           navigate("/movies");
         }
       })
-      .catch((err) => setServerErrorMessage(err))
-      .finally(() => setIsLoading(false));
+      .catch((err) => {
+        setServerErrorMessage(err);
+        setIsLoading(false);
+      });
   };
 
   const handleSubmit = (event) => {

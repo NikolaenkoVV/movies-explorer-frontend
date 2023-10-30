@@ -13,13 +13,16 @@ function Login({ setPopupMessage, setIsOpenPopup }) {
   const [serverErrorMessage, setServerErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  useEffect(()=> {
-    if(currentUser) {
+  useEffect(() => {
+    if (currentUser) {
       navigate("/movies");
     }
   }, [currentUser]);
 
   const handleLogin = (email, password) => {
+    if (isLoading) {
+      return;
+    }
     setIsLoading(true);
     auth
       .authorize(email, password)
@@ -35,8 +38,8 @@ function Login({ setPopupMessage, setIsOpenPopup }) {
       .catch((err) => {
         console.log(err);
         setServerErrorMessage(err);
-      })
-      .finally(() => setIsLoading(false));
+        setIsLoading(false);
+      });
   };
 
   const handleSubmit = (event) => {
